@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
 
 import isInternetExplorerBefore from './ieDetection';
 
@@ -156,21 +155,10 @@ class ShareButton extends PureComponent {
       disabled,
       disabledStyle,
       name,
-      network,
       role,
       style,
       tabIndex,
     } = this.props;
-
-    const classes = cx(
-      'SocialMediaShareButton',
-      `SocialMediaShareButton--${network}`,
-      {
-        'SocialMediaShareButton--disabled': !!disabled,
-        disabled: !!disabled,
-      },
-      className,
-    );
 
     return (
       <div
@@ -180,7 +168,7 @@ class ShareButton extends PureComponent {
         tabIndex={tabIndex}
         onClick={this.onClick}
         onKeyPress={this.onKeyPress}
-        className={classes}
+        className={className}
         style={{
           ...style,
           ...(disabled ? disabledStyle : {}),
