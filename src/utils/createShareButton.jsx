@@ -69,16 +69,11 @@ class ShareButton extends PureComponent {
     opts: PropTypes.object,
     openWindow: PropTypes.bool,
     url: PropTypes.string.isRequired,
-    role: PropTypes.string,
     style: PropTypes.object,
     windowWidth: PropTypes.number,
     windowHeight: PropTypes.number,
     beforeOnClick: PropTypes.func,
     onShareWindowClose: PropTypes.func,
-    tabIndex: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-    ]),
   };
 
   static defaultProps = {
@@ -86,8 +81,6 @@ class ShareButton extends PureComponent {
       opacity: 0.6,
     },
     openWindow: true,
-    role: 'button',
-    tabIndex: '0',
   }
 
   onClick = (e) => {
@@ -155,17 +148,13 @@ class ShareButton extends PureComponent {
       disabled,
       disabledStyle,
       name,
-      role,
       style,
-      tabIndex,
     } = this.props;
 
     return (
       <i
         name={name}
         {...additionalProps}
-        role={role}
-        tabIndex={tabIndex}
         onClick={this.onClick}
         onKeyPress={this.onKeyPress}
         className={className}

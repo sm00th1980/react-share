@@ -152,9 +152,7 @@ var ShareButton = function (_PureComponent) {
           disabled = _props2.disabled,
           disabledStyle = _props2.disabledStyle,
           name = _props2.name,
-          role = _props2.role,
-          style = _props2.style,
-          tabIndex = _props2.tabIndex;
+          style = _props2.style;
 
 
       return React.createElement(
@@ -162,8 +160,6 @@ var ShareButton = function (_PureComponent) {
         _extends({
           name: name
         }, additionalProps, {
-          role: role,
-          tabIndex: tabIndex,
           onClick: this.onClick,
           onKeyPress: this.onKeyPress,
           className: className,
@@ -189,21 +185,17 @@ ShareButton.propTypes = {
   opts: PropTypes.object,
   openWindow: PropTypes.bool,
   url: PropTypes.string.isRequired,
-  role: PropTypes.string,
   style: PropTypes.object,
   windowWidth: PropTypes.number,
   windowHeight: PropTypes.number,
   beforeOnClick: PropTypes.func,
-  onShareWindowClose: PropTypes.func,
-  tabIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  onShareWindowClose: PropTypes.func
 };
 ShareButton.defaultProps = {
   disabledStyle: {
     opacity: 0.6
   },
-  openWindow: true,
-  role: 'button',
-  tabIndex: '0'
+  openWindow: true
 };
 
 
