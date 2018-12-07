@@ -161,7 +161,7 @@ class ShareButton extends PureComponent {
     } = this.props;
 
     return (
-      <div
+      <i
         name={name}
         {...additionalProps}
         role={role}
@@ -174,7 +174,7 @@ class ShareButton extends PureComponent {
           ...(disabled ? disabledStyle : {}),
         }}>
         {children}
-      </div>
+      </i>
     );
   }
 }

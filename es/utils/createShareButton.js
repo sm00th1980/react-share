@@ -158,7 +158,7 @@ var ShareButton = function (_PureComponent) {
 
 
       return React.createElement(
-        'div',
+        'i',
         _extends({
           name: name
         }, additionalProps, {
